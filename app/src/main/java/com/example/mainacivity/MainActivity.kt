@@ -1,5 +1,6 @@
 package com.example.mainacivity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -21,6 +22,10 @@ class MainActivity : AppCompatActivity() {
 
         already_have_account_textView.setOnClickListener {
             Log.d("MainActivity","Try to show login activity")
+
+            // launch the login activity somehow
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
         }
     }
 }
